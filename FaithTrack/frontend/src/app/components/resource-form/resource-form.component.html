@@ -1,0 +1,70 @@
+<div class="container mt-4">
+  <h2 class="mb-3">{{ isEditMode ? 'Edit Resource' : 'Add New Resource' }}</h2>
+
+  <form [formGroup]="resourceForm" (ngSubmit)="onSubmit()">
+
+    <!-- Title -->
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="title"
+        [class.is-invalid]="f['title'].touched && f['title'].invalid"
+      />
+      <div class="invalid-feedback" *ngIf="f['title'].touched && f['title'].errors">
+        <div *ngIf="f['title'].errors['required']">Title is required.</div>
+        <div *ngIf="f['title'].errors['minlength']">Title must be at least 3 characters.</div>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        formControlName="description"
+        [class.is-invalid]="f['description'].touched && f['description'].invalid"
+      ></textarea>
+      <div class="invalid-feedback" *ngIf="f['description'].touched && f['description'].errors">
+        <div *ngIf="f['description'].errors['required']">Description is required.</div>
+        <div *ngIf="f['description'].errors['minlength']">Minimum 10 characters required.</div>
+      </div>
+    </div>
+
+    <!-- Category ID -->
+    <div class="mb-3">
+      <label class="form-label">Category ID</label>
+      <input
+        type="number"
+        class="form-control"
+        formControlName="category_id"
+        [class.is-invalid]="f['category_id'].touched && f['category_id'].invalid"
+      />
+      <div class="invalid-feedback" *ngIf="f['category_id'].touched && f['category_id'].errors">
+        <div *ngIf="f['category_id'].errors['required']">Category ID is required.</div>
+        <div *ngIf="f['category_id'].errors['min']">Must be at least 1.</div>
+      </div>
+    </div>
+
+    <!-- Scripture -->
+    <div class="mb-3">
+      <label class="form-label">Scripture</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="scripture"
+        [class.is-invalid]="f['scripture'].touched && f['scripture'].invalid"
+      />
+      <div class="invalid-feedback" *ngIf="f['scripture'].touched && f['scripture'].errors">
+        <div *ngIf="f['scripture'].errors['required']">Scripture is required.</div>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-success">
+      {{ isEditMode ? 'Update' : 'Create' }}
+    </button>
+    <button type="button" class="btn btn-secondary ms-2" (click)="onCancel()">Cancel</button>
+  </form>
+</div>
