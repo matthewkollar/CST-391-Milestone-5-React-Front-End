@@ -47,6 +47,19 @@ The design was updated to implement the same functionality from Milestone 4 in *
 
 ---
 
+## Completed REST API Documentation
+
+All REST endpoints used by the React frontend were tested and documented using **Postman**.
+
+| Method | Endpoint                             | Description              |
+|--------|--------------------------------------|--------------------------|
+| GET    | `http://localhost:5000/api/resources`     | Fetch all resources      |
+| POST   | `http://localhost:5000/api/resources`     | Create a new resource    |
+| PUT    | `http://localhost:5000/api/resources/5`   | Update resource with ID 5 |
+| DELETE | `http://localhost:5000/api/resources/1`   | Delete resource with ID 1 |
+
+---
+
 ## Technologies Used
 
 - **React 19** (JSX with functional components)
