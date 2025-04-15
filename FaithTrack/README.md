@@ -1,25 +1,26 @@
-# CST-391: Milestone 4 - Angular Application
+# CST-391: Milestone 5 - React Application
 **Student:** Matthew Kollar  
-**Date:** March 25, 2025  
+**Date:** April 15, 2025  
 
 ## Overview
 
 This project is part of the CST-391 JavaScript Web Application Development course at Grand Canyon University.  
-In **Milestone 4**, we built a front-end web application using **Angular** that integrates with the back-end REST API developed in Milestone 3. The frontend supports full CRUD operations on faith-based learning resources.
+In **Milestone 5**, we converted the existing Angular frontend into a **React** application that connects to the **Express/NodeJS REST API** created in Milestone 3. This app allows users to manage faith-based resources with full CRUD functionality.
 
 ## Screencast Demonstration
 
-**Screencast Link**: [Watch the Demo on Somup](http://somup.com/cTeTYu7Wri)
+**Screencast Link**: [Watch the Demo on Somup](http://somup.com/cTfoFjszSF)
 
 This screencast demonstrates:
-- Application navigation using Angular Router
-- Use of Bootstrap-styled navigation bar
-- UI-based Create, Read, Update, and Delete operations
-- Visual feedback for form validation and navigation polish
+- Home page with welcome message and navigation CTA
+- Responsive Bootstrap-styled navigation bar
+- CRUD operations using React and Fetch API
+- React Router navigation
+- Form validation with react-hook-form
 
 ## GitHub Repository
 
-**Repository Link**: [FaithTrack Angular + NodeJS Project (Milestone 4)](https://github.com/matthewkollar/CST-391-Milestone-4-Angular-App)
+**Repository Link**: [FaithTrack React + NodeJS Project (Milestone 5)](https://github.com/matthewkollar/CST-391-Milestone-5-React-Front-End)
 
 ---
 
@@ -27,52 +28,58 @@ This screencast demonstrates:
 
 ### Description
 
-The design was updated to include an Angular-based frontend that connects to the existing REST API. The UI includes a responsive Bootstrap navigation bar, a dedicated home page, resource list and details views, and a form to create and edit resources.
+The design was updated to implement the same functionality from Milestone 4 in **React**. The React application includes:
+- HomePage, ResourceList, Add/Edit forms
+- Navigation using React Router DOM
+- Form state and validation using `react-hook-form`
+- Responsive UI using Bootstrap
 
 ### Summary of Changes and Known Issues
 
 | Change / Update                        | Description                                                  | Known Issue |
 |----------------------------------------|--------------------------------------------------------------|-------------|
-| Angular UI integrated                  | Connected to REST API using HttpClientModule                | No          |
-| Resource CRUD views built              | List, Create, Edit, Delete Resource from UI                 | No          |
-| Bootstrap Navbar                       | Links to Home, All Resources, Add Resource                 | No          |
-| HomeComponent added                    | Homepage with links and CTA button                         | No          |
-| Cancel button on form navigates back   | Improved UX when cancelling form action                    | No          |
-| Updated Routing (app.routes.ts)        | Added Home route, preserved existing logic                 | No          |
-| Form validation in resource-form       | Title, description, category ID, and scripture validated   | No          |
+| React UI built with JSX                | Replaced Angular components with React JSX components        | No          |
+| Resource CRUD functionality            | List, Add, Edit, Delete using async fetch() calls            | No          |
+| Bootstrap Navbar                       | Fixed layout and styling for navigation links                | No          |
+| Home Page improved                     | Enhanced visual layout and styling of welcome page           | No          |
+| Title and favicon updated              | Tab title changed to "FaithTrack" and favicon updated        | No          |
+| React logo replaced with cross icon    | Custom favicon with faith-based symbol                       | No          |
 
 ---
 
 ## Technologies Used
 
-- **Angular 17** with TypeScript (standalone components)
-- **Bootstrap 5** for responsive layout
+- **React 19** (JSX with functional components)
+- **Bootstrap 5** for styling and responsive layout
+- **React Router DOM** for routing
+- **React Hook Form** for form validation
 - **Express.js** for REST API
-- **MySQL** database (hosted locally via MAMP)
-- **Postman** for API testing and documentation
+- **MySQL** database (via MySQL Workbench)
+- **VS Code** for development
 
 ---
 
 ## Functional Requirements Met
 
-- ✅ Full CRUD (Create, Read, Update, Delete) operations through Angular UI
-- ✅ Bootstrap NavBar for routing and navigation
-- ✅ Angular routing with routerLink and dynamic routes (edit/:id)
-- ✅ Form validation and error handling
-- ✅ Screencast of application functionality
+- ✅ Full CRUD (Create, Read, Update, Delete) operations through React UI
+- ✅ React Router with route paths and dynamic edit route
+- ✅ Bootstrap NavBar for navigation
+- ✅ Form validation using react-hook-form
+- ✅ Clean homepage layout with welcome CTA
+- ✅ Screencast demonstrating full functionality
 
 ---
 
 ## Lessons Learned
 
-- Better understanding of Angular Standalone Components and Routing
-- Importance of aligning form structure with API expectations
-- Handling dynamic routing for edit/update flow
-- Enhanced my ability to connect front-end UI with real backend data via HttpClient
-- Improved UI/UX polish through Bootstrap and clean navigation flow
+- How to migrate from Angular to React using component-based architecture
+- Using `react-hook-form` for clean form validation in React
+- Managing async API requests and error handling with Fetch API
+- React routing, dynamic parameters, and page navigation
+- Importance of UI layout and visual polish for user engagement
 
 ---
 
 ## Pending Bugs / Issues
 
-- No current bugs reported. All known issues have been addressed during implementation and testing.
+- No known issues or bugs. All views and functionality work as expected.
